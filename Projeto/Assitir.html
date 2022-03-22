@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>IT A COISA</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/Projeto/Style/owl.carousel.min.css">
+        <link rel="stylesheet" href="/Projeto/Style/owl.theme.default.min.css">
+        <link rel="stylesheet" href="/Projeto/Style/responsive.css">
+
+    </head>
+
+    <style>
+        :root{
+    --vermelho: #E50914;
+    --preto: #141414;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: var(--preto);
+    font-family: 'Arial', Times, serif;
+    color: white;
+}
+
+header .container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo{
+    margin-left: 5px;
+    color: var(--vermelho);
+    font-family: 'Arial Black', Times;
+    font-size: 40px;
+    transition: color 0.2s linear, border .2s linear;
+    text-decoration: none;
+}
+
+header .logo:hover{
+    border-bottom-color: transparent;
+}
+
+header nav a{
+    text-decoration: none;
+    color: #AAA;
+    margin-right: 10px;
+}
+
+header nav a:hover{
+    color: #FFF;
+}
+
+video{
+    display: inline-block;
+    width: 100%;
+    height: 1000px;
+}
+
+a{
+    transition: color 0.2s linear, border .2s linear;
+    text-decoration: none;
+    color: #AAA;
+}
+
+a:hover{
+    border-bottom-color: transparent;
+    color: #FFF;
+}
+
+    </style>
+
+    <body>
+
+        <header>
+            <div class="container">
+                <h2 class="logo">NETFLIX</h2>
+                <nav>
+                    <a href="/Projeto/index.html">Inicio</a>
+                    <a href="#">Séries</a>
+                    <a href="#">Filmes</a>
+                    <a href="#">Documentários</a>
+                </nav>
+            </div>
+        </header>
+        
+        <iframe class="video" width="100%" height="800px" src="https://www.youtube.com/embed/dD264ZjfKlk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+       
+        <script src="https://kit.fontawesome.com/6ff96b8cce.js" crossorigin="anonymous"></script>
+        <script src="/Projeto/Js.owl/jquery.min.js"></script>
+        <script src="/Projeto/Js.owl/owl.carousel.min.js"></script>
+        <script src="/Projeto/Js.owl/Projeto.js"></script>
+
+
+    </body>
+</html>

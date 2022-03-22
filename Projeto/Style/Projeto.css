@@ -1,0 +1,169 @@
+:root{
+    --vermelho: #E50914;
+    --preto: #141414;
+}
+
+/* elementos base*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: var(--preto);
+    font-family: 'Arial', Times, serif;
+    color: white;
+}
+
+header .container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo{
+    margin-left: 5px;
+    color: var(--vermelho);
+    font-family: 'Arial Black', Times;
+    font-size: 40px;
+    transition: color 0.2s linear, border .2s linear;
+    text-decoration: none;
+    box-shadow: rgba(0, 0, 0, .5);
+}
+
+header .logo:hover{
+    border-bottom-color: transparent;
+    box-sizing: border-box;
+}
+
+header nav a{
+    text-decoration: none;
+    color: #AAA;
+    margin-right: 10px;
+    border-bottom: none;
+    display: inline-block;
+    width: auto;
+}
+a{
+    color: #FFF;
+    text-decoration: none;
+    font-size: 12px;
+}
+a:hover{
+    color: black;
+    display: inline-block;
+}
+
+
+header nav a:hover{
+    color: #FFF;
+}
+
+/* filme principal*/
+.filme-principal{
+    font-size: 16px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5) , rgba(0, 0, 0, 0.5)), url(/Projeto/imagensProjeto/fundo.jpg);
+    
+    height: 550px;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.filme-principal .descricao{
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.filme-principal .titulo{
+    margin-top: 20%;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+.botao{
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: #FFF;
+
+    padding: 15px 30px;
+    margin-right: 15px;
+    font-size: 12px;
+
+    cursor: pointer;
+    transition: .3s ease all;
+
+    border-radius: 5px;
+    display: inline-block;
+    width: auto;
+}
+
+.botao:hover{
+    background-color: white;
+    color: black;
+    border-color: transparent;
+}
+
+.botoes{
+    position: relative;
+}
+
+.botao i{
+    margin-right: 8px;
+}
+
+.container{
+    margin-left: 20px;
+}
+
+.filme-principal .container{
+    width: 70%;
+}
+
+.box-filme{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.carrosel-filmes{
+    margin-top: 10px;
+}
+
+.item:before{
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    transition: all .5s;
+}
+
+.item:hover:before{
+    background: rgba(0, 0, 0, .5);
+}
+
+.item:after{
+    opacity: 0;  
+}
+
+.item:hover:after{
+    content: 'Assistir';
+    display: block;
+    position: absolute;
+    border: .5px solid white;
+    color: #FFF;
+    top: 50%;
+    left: 50%;
+    padding: 10px 20px;
+    transform: translate(-50%, -50%);
+    opacity: 2;
+}
