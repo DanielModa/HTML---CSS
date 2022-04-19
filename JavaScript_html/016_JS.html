@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>JavaScript Porgramming Logic</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,
+        initial-scale=1.0">
+
+        <style>
+
+        </style>
+    </head>
+
+    <body>
+        <h1>JavaScript Porgramming Logic</h1>
+
+
+        <button onclick="startCalculate('+')">+</button>
+        <button onclick="startCalculate('-')">-</button>
+        <button onclick="startCalculate('*')">*</button>
+        <button onclick="startCalculate('/')">/</button>
+
+        <div id="output"></div>
+        
+        
+        <script>
+
+            var n2 = prompt('enter a number:');
+            n2 = parseFloat(n2);
+
+           write(n2);
+
+           function startCalculate(symbol){
+               var n1 = document.querySelector('#output').textContent;
+               n1 = parseFloat(n1);
+
+               var n2 = prompt('enter other number:');
+               n2 = parseFloat(n2);
+
+               try{
+                var mensager = calculate(symbol, n1, n2);
+               } catch(e){
+                alert(e);
+                return;
+               }
+
+               write(mensager);
+           }
+
+           function write(message){
+               var output = document.querySelector('#output');
+               output.innerHTML = message;
+           }
+
+           function calculate(symbol, n1, n2){
+
+            if(symbol !== '+' && symbol !== '-' && symbol !== '*' && symbol !== '/'){
+                throw new Error('enter a symbol valid');
+            }
+
+            if( isNaN(n1) || isNaN(n2)){
+                throw new Error('only numbers');                
+            }
+              
+            var numberCalculate = null;
+
+            switch(symbol){
+                case '+': 
+                numberCalculate = n1 + n2;
+                   break;
+                case '-': 
+                numberCalculate = n1 - n2;
+                   break;
+                case '*': 
+                numberCalculate = n1 * n2;
+                   break;
+                case '/': 
+                numberCalculate = n1 / n2;
+                   
+               }
+
+               return numberCalculate;
+
+           }
+
+
+        </script>
+    </body>
+</html>

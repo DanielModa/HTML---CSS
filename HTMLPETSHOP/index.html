@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="Viewport" content="width=device-width, initial-scale=1.0">
+        <title>PET SHOP</title>
+        <link rel="stylesheet" href="/HTMLPETSHOP/style.css">
+    </head>
+    <body>
+        <header>
+            <ul>
+                <li><h1>BOUTIQUE 4PAWZ</h1></li>
+                <li><h2>Cuidar de Animais</h2></li>
+            </ul>
+        </header>
+
+        <section>
+            <form>
+                <h3>Escolha como quer cuidadar de seu pet:</h3>
+                <ul>
+                    <li><input type="radio" id="tosa" name="pets">
+                        <label for="tosa">Tosa</label></li>
+                    <li><input type="radio" id="racao" name="pets">
+                        <label for="racao">Ração</label></li>
+                    <li><input type="radio" id="adestrar" name="pets">
+                        <label for="adestrar">Adestrar</label></li>
+                </ul>
+            </form>
+        </section>
+
+        <section>
+            <button id="vendas">Vendas</button> <button id="estorno">Estorno</button>
+        </section>
+
+        <section id="table">
+            <table>
+                <tr>
+                    <th>Opções</th><th>Quantidade</th><th>Valores</th>
+                </tr>
+                <tr>
+                    <td>Tosa e banho</td><td id="resultadoTosa"></td><td id="vendaTosa"></td>
+                </tr>
+                <tr>
+                    <td>Ração</td><td id="resultadoRacao"></td><td id="vendaRacao"></td>
+                </tr>
+                <tr>
+                    <td>Adestrador</td><td id="resultadoAdestrador"></td><td id="vendaAdestrador"></td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <button id="export">Planilha</button>
+        </section>
+        
+        <script src="/HTMLPETSHOP/tableToExcel.js"></script>
+        <script src="/HTMLPETSHOP/javascript.js"></script>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>JavaScript Porgramming Logic</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,
+        initial-scale=1.0">
+
+        <style>
+
+        </style>
+    </head>
+
+    <body>
+        <h1>JavaScript Porgramming Logic</h1>
+        
+        <div id="output"></div>
+        
+        <script>
+
+            var produts = new Array('pen', 'pencil', 'scissors', 'eraser', 'notebook', 'book');
+
+            produts.push('compass', 'cardboard');
+
+            var output = document.querySelector('#output');
+
+            var msg = '';
+
+            for(var i = 0; i < produts.length; i++){
+                msg += 'Produts ' + (i + 1) + ': ' + produts[i] + '<br>';
+            }
+
+            output.innerHTML = msg;
+
+        </script>
+    </body>
+</html>

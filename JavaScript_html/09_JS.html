@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Logica de Programação JavaScript</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,
+        initial-scale=1.0">
+
+        <style>
+
+        </style>
+    </head>
+
+    <body>
+        <h1>Lógica de Programação JavaScript</h1>
+
+        <script>
+            
+           var number = prompt('digite um numero:');
+           number = parseFloat(number);
+        //.write não e utilizado profissionalmente!
+        // cuidado ao trabalhar com loop, para não cair no loop infinito!!!!!
+           
+           //for (var i = 1; i <=1000; i++){
+            //document.write( number + 'x '+ i +' = ' + (number * i) + '<br>');
+           //}
+
+
+           //EXERCICO
+
+           var n = prompt('Digite um numero:');
+           n = parseFloat(n);
+
+           var i = 1;
+
+           while(i <=1000){
+               document.write(n + 'x' + i + ' = ' + (n * i) + '<br>');
+
+               if(i % 10 === 0 && i > 0){
+                   document.write('<hr>');
+           }
+
+           i = i + 1;
+        }
+
+           document.write('Closer loop');
+        </script>
+    </body>
+</html>

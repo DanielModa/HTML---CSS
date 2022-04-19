@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>JavaScript Porgramming Logic</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,
+        initial-scale=1.0">
+
+        <style>
+
+        </style>
+    </head>
+
+    <body>
+        <h1>JavaScript Porgramming Logic</h1>
+
+        <button onclick="ShowAreaAlert()">Show area alert</button>
+
+        <button onclick="ShowAreaOutput()">Show area output</button>
+
+        <div id="output"></div>
+        
+        
+        <script>
+
+            function ShowAreaAlert(){
+
+            var width = prompt('enter a width:');
+            width = parseFloat(width);
+
+            var height = prompt('enter a height:');
+            height = parseFloat(height);
+
+            try{
+                var area = calculateArea(width, height);
+            } catch(e){
+                area = e;
+            }
+
+            alert('Total Area' + area);
+                
+            }
+
+            function ShowAreaOutput(){
+
+            var width = prompt('enter a width:');
+            width = parseFloat(width);
+
+            var height = prompt('enter a height:');
+            height = parseFloat(height);
+
+            try{
+                var area = calculateArea(width, height);
+            } catch(e){
+                area = e;
+            }
+
+
+            document.querySelector('#output').innerHTML = 'Total Area:' + area;
+
+            }
+
+            ShowAreaAlert();
+
+            function calculateArea(w, h){
+                if (w === undefined || h === undefined){
+                    throw new Error('calculateArea need two numbers');
+                }
+
+                if( isNaN(w) || isNaN(h) ){
+                    throw new Error('only numbers');
+                }
+                return w * h;
+            }
+
+        </script>
+    </body>
+</html>

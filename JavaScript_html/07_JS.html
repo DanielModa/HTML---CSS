@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Logica de Programação JavaScript</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,
+        initial-scale=1.0">
+
+        <style>
+
+        </style>
+    </head>
+
+    <body>
+        <h1>Lógica de Programação JavaScript</h1>
+
+        <script>
+            
+            var n1 = parseFloat(prompt("digite um numero:"));
+            var n2 = parseFloat(prompt("digite outro numero:"));
+
+            if(n1 === n2){
+                alert("Vocês empataram")
+                alert("Fim do programa!")
+            } else{
+                var nS = parseInt(Math.random() * 2);
+                alert("Numero Sorteado:" + nS);
+
+                if( (nS === 0 && n1 < n2) || (nS === 1 && n1 > n2) ){
+                    alert("Ganhou o Jogador 1");
+                } else{
+                    alert("Ganhou o Jogador 2");
+                }
+            }
+                
+            
+
+        </script>
+    </body>
+</html>

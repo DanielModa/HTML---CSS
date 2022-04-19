@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>JavaScript Porgramming Logic</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,
+        initial-scale=1.0">
+
+        <style>
+
+        </style>
+    </head>
+
+    <body>
+        <h1>JavaScript Porgramming Logic</h1>
+        
+        <div id="output"></div>
+        
+        <script>
+
+            var product1 = new Object();
+            product1.name = "pen";
+            product1.price = "2.2";
+            product1.inventory = 10;
+
+            product1.purchase = function(qtd){
+                if(!qdd) {
+                    qtd = 1;
+                }
+                console.log('bought pen');
+                //this.inventory--;
+                this.inventory = this.inventory - qtd;
+                console.log(this.inventory);
+
+            }
+
+            var msg = '';
+
+            msg += 'name:' + product1.name + '<br>';
+            msg += 'price:' + product1.price + '<br>';
+            msg += 'inventory' + product1.inventory + '<br>';
+
+            document.querySelector('#output').innerHTML = msg;
+
+        </script>
+    </body>
+</html>

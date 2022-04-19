@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Logica de Programação JavaScript</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,
+        initial-scale=1.0">
+
+        <style>
+
+        </style>
+    </head>
+
+    <body>
+        <h1>Lógica de Programação JavaScript</h1>
+
+
+        <button onclick="SeeCalculer()">Creat Calculer</button>
+        <button onclick="ClearCalculer()">Clear Calculer</button>
+
+        <div id="output"></div>
+
+        <script>
+
+            function SeeCalculer(){
+                var n = prompt('enter a number:')
+
+                ClearCalculer();
+
+                n = parseFloat(n);
+
+                var i = 1;
+
+                while(i <= 1000){
+                    mensager += n + 'x' + i + '=' + (n * i) + '<br>';
+                    i++;
+                }
+                output.innerHTML = mensager;
+            }
+
+            function ClearCalculer(){
+                mensager = '';
+                output.innerHTML = mensager;
+            }
+
+            var output = document.querySelector('#output');
+
+            var mensager = '';
+            
+            //para acessar o HTML document. dentro do JavaScript
+            //console.log(output); somente durante a programação usar esse codigo, caso queira!
+
+            
+
+        </script>
+    </body>
+</html>

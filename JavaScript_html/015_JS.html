@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>JavaScript Porgramming Logic</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,
+        initial-scale=1.0">
+
+        <style>
+
+        </style>
+    </head>
+
+    <body>
+        <h1>JavaScript Porgramming Logic</h1>
+
+
+        <button onclick="ShowAreaAlert()">Show area Alert</button>
+        <button onclick="ShowAreaOutput()">Show area Output</button>
+        <div id="output"></div>
+        
+        
+        <script>
+
+            
+
+            function ShowAreaAlert(){
+
+                var width = prompt('enter a width:');
+                width = parseFloat(width);
+
+                var height = prompt('enter a height:');
+                height = parseFloat(height);
+
+                var area = calculateArea(width, height);
+
+                alert('total area is:' + area);
+            }
+
+            function ShowAreaOutput(){
+                
+                var width = prompt('enter a width:');
+                width = parseFloat(width);
+
+                var height = prompt('enter a height:');
+                height = parseFloat(height);
+
+                var area = calculateArea(width, height);
+
+                document.querySelector('#output'). innerHTML = 'total area is:'
+            }
+
+            function calculate(){
+                return w * h;
+            }
+
+        </script>
+    </body>
+</html>
